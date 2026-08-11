@@ -1,4 +1,4 @@
-﻿namespace MyRecipeBook.application
+﻿namespace MyRecipeBook.exception
 {
     public class Class1
     {

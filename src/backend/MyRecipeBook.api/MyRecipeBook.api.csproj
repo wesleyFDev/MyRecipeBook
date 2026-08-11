@@ -10,4 +10,11 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\shared\MyRecipeBook.communication\MyRecipeBook.communication.csproj" />
+    <ProjectReference Include="..\..\shared\MyRecipeBook.exception\MyRecipeBook.exception.csproj" />
+    <ProjectReference Include="..\MyRecipeBook.application\MyRecipeBook.application.csproj" />
+    <ProjectReference Include="..\MyRecipeBook.infrastructure\MyRecipeBook.infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

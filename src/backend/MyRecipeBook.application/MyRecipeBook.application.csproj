@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\shared\MyRecipeBook.communication\MyRecipeBook.communication.csproj" />
+    <ProjectReference Include="..\..\shared\MyRecipeBook.exception\MyRecipeBook.exception.csproj" />
+    <ProjectReference Include="..\MyRecipeBook.domain\MyRecipeBook.domain.csproj" />
+  </ItemGroup>
+
 </Project>
