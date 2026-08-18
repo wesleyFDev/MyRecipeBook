@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyRecipeBook.application.UseCases.User.Register;
+using MyRecipeBook.communication.Requests;
 
 namespace MyRecipeBook.api.Controllers
 {
@@ -6,9 +8,12 @@ namespace MyRecipeBook.api.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        public IActionResult Register()
+        [HttpPost("register")]
+        public IActionResult Register([FromBody] RequestRegisterUserAccountJson request)
         {
-            // Implement user registration logic here
+            var useCase = new RegisterUserAccountUseCase();
+           
+            useCase.Execute(request);
             return Created();
         }
     }
