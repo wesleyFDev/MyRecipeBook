@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MyRecipeBook.exception.ExceptionsBase
+﻿namespace MyRecipeBook.exception.ExceptionsBase
 {
     
     public class ErrorOnValidationException : MyRecipeBookException
@@ -13,6 +7,11 @@ namespace MyRecipeBook.exception.ExceptionsBase
         public ErrorOnValidationException(List<string> errorMessages)
         {
             _errors = errorMessages;
+        }
+
+        public List<string> GetErrorMessages()
+        {
+            return _errors;
         }
     }
 }
