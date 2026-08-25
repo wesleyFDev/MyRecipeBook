@@ -20,7 +20,14 @@ namespace MyRecipeBook.api.Filters
             else
             {
                 context.HttpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
-                context.Result = new ObjectResult(new ResponseErrorJson(ResourceMessageException.UNKNOWN_ERROR));
+                context.Result = new ObjectResult(new
+                {
+                    message = context.Exception.Message,
+                    stackTrace = context.Exception.StackTrace,
+                    innerException = context.Exception.InnerException?.Message
+                });
+                // context.HttpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
+                // context.Result = new ObjectResult(new ResponseErrorJson(ResourceMessageException.UNKNOWN_ERROR));
             }
         }
     }

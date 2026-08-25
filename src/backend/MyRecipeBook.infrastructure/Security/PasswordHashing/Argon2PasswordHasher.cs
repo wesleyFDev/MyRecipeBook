@@ -1,6 +1,5 @@
 ﻿using Konscious.Security.Cryptography;
 using MyRecipeBook.domain.Security.PasswordHasher;
-using System.ComponentModel;
 using System.Security.Cryptography;
 using System.Text;
 
